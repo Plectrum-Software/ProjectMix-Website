@@ -1,0 +1,147 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Mix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section with Logo -->
+    <div class="hero">
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="logo.png" alt="Game Logo" class="logo">
+            </div>
+            <p class="hero-tagline">VR Cyberpunk Bartending Action</p>
+            <div class="button-group">
+                <a href="https://store.steampowered.com/app/2439770/Project_Mix/" class="wishlist-button">Add to Wishlist</a>
+                <a href="#" class="press-kit-button">Press Kit</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trailer Section -->
+    <section class="section trailer-section">
+        <h2>Watch the Trailer</h2>
+        <div class="trailer-container">
+            <iframe 
+                src="https://www.youtube.com/embed/cK7mk_LLKks?si=Wp8zk6VDvCXLvfpv"
+                title="Game Trailer"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="section">
+        <h2>Screenshots</h2>
+        <div class="screenshots">
+            <img src="Screenshots/1.png" alt="Screenshot 1" class="screenshot">
+            <img src="Screenshots/2.PNG" alt="Screenshot 2" class="screenshot">
+            <img src="Screenshots/3.PNG" alt="Screenshot 3" class="screenshot">
+            <img src="Screenshots/4.PNG" alt="Screenshot 4" class="screenshot">
+            <img src="Screenshots/6.PNG" alt="Screenshot 4" class="screenshot">
+            <img src="Screenshots/7.PNG" alt="Screenshot 4" class="screenshot">
+
+        </div>
+    </section>
+
+    <!-- Description Section -->
+    <section class="section">
+        <h2>About the Game</h2>
+        <div class="description">
+            <p>Project Mix is a VR cyberpunk bartending game inspired by games such as VA-11 Hall-A and Persona.</p>
+            <br>
+            <p>Features:</p>
+            <ul>
+                <li>Interactive bartending built for VR</li>
+                <li>Character Focused writing</li>
+                <li>Atmosphere and vibes</li>
+                <li>Stunning visual graphics</li>
+                <li>Original soundtrack</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="section">
+        <h2>Join our community!</h2>
+        <!-- <div class="social-links">
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Discord</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">YouTube</a>
+        </div> -->
+        <div class="social-links">
+            <!-- Twitter -->
+            <a href="https://x.com/plectrumxr" class="social-link" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <!-- Discord -->
+            <a href="https://discord.gg/TY3wck2YPW" class="social-link" target="_blank">
+                <i class="fab fa-discord"></i>
+            </a>
+                  
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/plectrumxr" class="social-link" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            
+     
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/plectrumxr/" class="social-link" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+
+    
+    
+    </section>
+
+    <section class="wishlist-section">
+        <h2>Remember to wishlist our game!</h2>
+        <p>We really need the support so we get noticed on Steam.</p>
+        <a href="https://store.steampowered.com/app/2439770/Project_Mix/" class="wishlist-button large">Add to Wishlist</a>
+        <div class="release-date">Coming late 2025.</div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="publisher">
+                Published by Plectrum Software.
+            </div>
+            <div class="footer-divider"></div>
+            <div class="copyright">
+                © 2024 Plectrum Software. All Rights Reserved.
+            </div>
+            <!-- <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div> -->
+        </div>
+    </footer>
+    
+    <script>
+        function applyParallax() {
+            const parallax = document.querySelector('.hero');
+            let scrollPosition = window.pageYOffset;
+            
+            // Adjust the background position for parallax effect
+            parallax.style.backgroundPositionY = `${-0.5 + scrollPosition * 0.2}px`;
+        }
+        // Initialize position when the page loads
+        window.addEventListener('load', applyParallax);
+
+        window.addEventListener('scroll', applyParallax);
+    </script>
+</body>
+</html>
